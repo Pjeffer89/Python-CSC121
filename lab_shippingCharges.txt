@@ -1,0 +1,39 @@
+#  **student name**  lab 3-13  spring 2021
+
+# =============================  constants
+#=== ============weight breaks
+set TOPWEIGHT to 10
+set SECONDWEIGHT to 6
+set THIRDWEIGHT to 2
+set BOTTOMWEIGHT to 0
+
+# ==============weight charges
+set TOPCHG to 5.25
+set SECONDCHG to 4.35
+set THIRDCHG to 3.75
+set BOTTOMCHG to 2.25
+
+# =====================Local variables
+
+set weight to 0.0
+set shippingCost to 0.0
+
+# ======================input package weight
+
+ input weight from keyboard as float
+
+# =======================Calculate the shipping charge
+
+if weight is greater than TOPWEIGHT:
+    set shippingCost to TOPCHG
+if weight is greater than SECONDWEIGHT:
+    set shippingCost to SECONDCHG
+if weight is greater than THIRDWEIGHT:
+    set shippingCost to THIRDCHG
+if weight is BOTTOMWEIGHT
+    set shippingCost to BOTTOMCHG
+
+# =================================Display results
+
+print('Weight of package is ',format(weight,'.2f'))
+print('Shipping charge: $', format(shippingCost*weight, '.2f'))
